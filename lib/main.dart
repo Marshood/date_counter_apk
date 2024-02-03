@@ -14,7 +14,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Date Counter',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
+        scaffoldBackgroundColor: const Color.fromARGB(255, 44, 44, 44),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Counter'),
@@ -33,12 +34,17 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(scaffoldBackgroundColor: const Color(0xFFEFEFEF)),
+      theme: ThemeData(
+          scaffoldBackgroundColor: const Color.fromARGB(255, 0, 0, 0)),
       home: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.black,
           title: const Text(
             'Countdown Date',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 26.0),
+            style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 26.0,
+                color: Colors.white),
           ),
         ),
         body: const CountdownWidget(
